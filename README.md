@@ -13,7 +13,16 @@ pip install -r requirements.txt
 ## Usage
 
 ```
+1. run command below to create docker containers (1 Selenium Grid Hub and 3 Nodes):
+docker-compose -f docker-compose.yml up
+
+2. run command below to start the script:
 python ./run.py
+
+3. Launch VNC Viewer (on Mac) and enter the following Remote Chrome Server address to connect to remote screen:
+localhost:5900
+
+
 ```
 
 ## Notes
@@ -30,6 +39,9 @@ python ./run.py
        #mail = sendmail.SendMail()
        #mail.send()
 ```
+3. Please find below the link for the screen recording video:  https://drive.google.com/file/d/1CUtJA1c-yO625MEkXEC9tfxM_gglH443/view?usp=sharing
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
