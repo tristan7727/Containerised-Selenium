@@ -22,7 +22,6 @@ python ./run.py
 3. Launch VNC Viewer (on Mac) and enter the following Remote Chrome Server address to connect to remote screen:
 localhost:5900
 
-
 ```
 
 ## Notes
@@ -40,7 +39,14 @@ localhost:5900
        #mail.send()
 ```
 3. Please find below the link for the screen recording video:  https://drive.google.com/file/d/1CUtJA1c-yO625MEkXEC9tfxM_gglH443/view?usp=sharing
-
+4. Please be aware that to run the script on another docker container (for example RFireFox), you will need to make the below changes in the code:
+```
+    1. Stop/Remove the docker containers via command:  "docker-compose -f docker-compose.yml down";
+    2. Run command below to make sure containers have been removed correctly:  "docker ps -a";
+    3. In ./config/globalparam.py, line 38 change the default browser from current 'RChrome' to 'RFireFox';
+    4. Re-run the docker compose command to start new containers: "docker-compose -f docker-compose.yml up";
+    5. In VNC Viewer start a new connection with Server address "localhost:5902".
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
